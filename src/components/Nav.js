@@ -1,21 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#">000 블로그입니다.</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div className="container">
+                <a className="navbar-brand" href="#">000 블로그입니다.</a>
+                <button className="navbar-toggler navbar-toggler-right" type="button">
                     Menu
-                <i class="fas fa-bars"></i>
+                <i className="fas fa-bars"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                <div className="collapse navbar-collapse" id="navbarResponsive">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">Home</Link>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/login">Login</Link>
                         </li>
                     </ul>
                 </div>

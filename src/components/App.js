@@ -5,9 +5,9 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Nav from "./Nav";
 import Header from "./Header";
 import Home from './Home';
-import Footer from './Footer'
+import Footer from './Footer';
 
-// other component
+// Nav component
 import Login from './Login'
 import Post from './Post'
 

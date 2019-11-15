@@ -1,13 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import "./TagList.css";
 
-export default function TagList({Tags}) {
-  
+export default function TagList({ tags, getPostsByTag }) {
+    const [active, setActive] = useState(null);
+
     return (
         <section>
             <ul>
-                {Tags && Tags.map(tag => <li>{tag.name}({tag.posts.length})</li>)}
+                {tags && tags.map((tag, i) => (
+                    <li className={active === i ? 'tag-active tag' : 'tag'}
+                        onClick={() => {
+                            getPostsByTag(tag._id); setActive(i);
+                        }}>
+                        {`${tag.name}(${tag.posts.length})`}
+                    </li>
+                ))
+                }
             </ul>
-
         </section>
-    )
+    );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Main({ Posts }) {
+export default function Main({ Posts, getNextPage }) {
 
     return (
         <div className="container">
@@ -20,7 +20,10 @@ export default function Main({ Posts }) {
                     ))}
 
                     <div className="clearfix">
-                        <a className="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                        <button type="button" className="btn btn-primary float-right"
+                            onClick={() => { getNextPage(); }}
+                        >Older Posts &rarr;
+                        </button>
                     </div>
                 </div>
             </div>

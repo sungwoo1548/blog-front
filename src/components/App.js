@@ -10,6 +10,7 @@ import Footer from './Footer';
 // Nav component
 import Login from './Login'
 import Post from './Post'
+import Join from './Join'
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
                 render={(props) => <Login {...props} {...auth} />}
             />
             <Route path="/post/:id" component={Post} />
+            <Route path="/join" component={Join} />
             <Footer />
         </BrowserRouter>
     )
